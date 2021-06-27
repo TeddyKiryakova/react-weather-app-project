@@ -21,18 +21,19 @@ if (unit === "celsius") {
         <div className="WeatherTemperature">
              <span className="temperature">
                  {Math.round(props.celsius)}</span>
-             <span className="unit">°C |<a href="/" onClick={convertToFahrenheit}>  °F 
-             </a>
+             <span className="unit">°C | {" "}
+              <a href="/" onClick={convertToFahrenheit}> 
+              °F </a>
              </span>
         </div>
     );
     } else {
     return (
         <div className="WeatherTemperature">
-             <span className="temperature">
-                 {Math.round(props.fahrenheit())}</span>
+             <span className="temperature">{Math.round(fahrenheit())}</span>
              <span className="unit"> 
-             <a href="/" onClick={convertToCelsius}> °C </a> 
+             <a href="/" onClick={convertToCelsius}> 
+             °C </a> {" "}
              | °F
              </span>
         </div>
